@@ -2,7 +2,9 @@
 <?=\app\widgets\MenuWidget::widget()?>
 <?use yii\helpers\Url;?>
 
-
+<?php
+$this->title = 'Ресторан Суши' . ' | ' . 'Home page';
+?>
 <div class="container">
     <div class="row">
 

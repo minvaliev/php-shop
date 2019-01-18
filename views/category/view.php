@@ -2,7 +2,10 @@
 <?=\app\widgets\MenuWidget::widget()?>
 <?php use yii\helpers\Url;?>
 
-<?php $this->title = 'Ресторан';?>
+<?php
+$this->title = 'Ресторан Суши' . ' | ' . $goods[0]['category'];
+?>
+
 <div class="container">
     <div class="row justify-content-center">
 

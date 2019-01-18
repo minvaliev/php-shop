@@ -1,4 +1,6 @@
-
+<?php
+$this->title = 'Ресторан Суши' . ' | ' . 'More about rolls';
+?>
 <div class="container">
     <div class="row justify-content-md-center">
 

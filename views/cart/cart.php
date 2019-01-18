@@ -1,4 +1,5 @@
 <h2 style="padding: 10px; text-align: center">Корзина</h2>
+<?php var_dump($good)?>
 <?php
     if ($session['cart']) {
 ?>

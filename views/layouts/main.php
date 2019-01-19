@@ -32,7 +32,7 @@ AppAsset::register($this);
             <div class="header">
                 <a href="/">На главную</a>
                 <a href="#">Вход в админку</a>
-                <a href="#" onclick="openCart(event)">Корзина</a>
+                <a href="#" onclick="openCart(event)">Корзина <span class="menu-quantity">(<?=$_SESSION['cart.totalQuantity'] ? $_SESSION['cart.totalQuantity'] : 0?>)</span></a>
                 <form method="GET" action="<?=URL::to(['category/search'])?>">
                     <input type="text" style="padding: 5px" placeholder="Поиск..." name="search">
                 </form>
@@ -54,11 +54,21 @@ AppAsset::register($this);
 
 <div id="cart" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+        <div style="padding: 15px" class="modal-content">
             Альберт
         </div>
     </div>
 </div
+
+<div id="order" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div style="padding: 15px" class="modal-content">
+            Альберт
+        </div>
+    </div>
+</div
+
+
 
 <?php $this->endBody() ?>
 </body>

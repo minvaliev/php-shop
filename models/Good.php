@@ -40,7 +40,7 @@ class Good extends ActiveRecord
     }
 
     public function getOneGood ($name) {
-        return Good::find()->where (['link_name' => $name])->asArray()->one();
+        return Good::find()->where (['link_name' => $name])->one();
     }
 
     public function getSearchResults($search) {

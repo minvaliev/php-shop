@@ -13,7 +13,7 @@ use yii\db\ActiveRecord;
 
 class Cart extends ActiveRecord
 {
-    public function AddToCart ($good) {
+    public function addToCart ($good) {
         if (isset($_SESSION['cart'][$good['id']])) {
             $_SESSION['cart'][$good['id']]['goodQuantity'] += 1;
         }
@@ -30,6 +30,14 @@ class Cart extends ActiveRecord
         $_SESSION['cart.totalSum'] = isset($_SESSION['cart.totalSum']) ? $_SESSION['cart.totalSum'] + $good->price : $good->price;
 
 
+    }
+
+    public function recalcCard ($id) {
+        $quantity = $_SESSION['cart'][$id]['goodQuantity'];
+        $price = $_SESSION['cart'][$id]['price'] * $quantity;
+        $_SESSION['cart.totalQuantity'] -= $quantity;
+        $_SESSION['cart.totalSum'] -= $price;
+        unset($_SESSION['cart'][$id]);
     }
 
 }

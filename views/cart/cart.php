@@ -47,7 +47,7 @@
 </div>
 
 <?php } else { ?>
-<h3>В вашей корзине ничего нет :</h3>
+<h3>В вашей корзине ничего нет :)</h3>
 <button id="btn-hide" style="width: 200px" type=" button" class="btn btn-secondary">Начать покупки</button>
 
 <?php } ?>

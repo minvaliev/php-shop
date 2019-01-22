@@ -12,6 +12,10 @@ class OrderGood extends \yii\db\ActiveRecord
         return 'order_good';
     }
 
+    public function getOrder () {
+        return $this->hasOne(OrderGood::class, ['id' => 'order_id']);
+    }
+
     public function rules()
     {
         return [

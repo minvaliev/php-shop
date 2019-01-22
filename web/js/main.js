@@ -109,3 +109,19 @@ $('body').on('click', '.delete', function(){
     })
 })
 
+let split = window.location.href.split('/');
+let id = split[split.length-1];
+// console.log(id);
+let nav = document.getElementsByClassName('nav-link');
+console.log(nav);
+
+for (let i=0; i<nav.length; i++) {
+    if (nav[i].getAttribute('data-id') == id) {
+        nav[i].classList.add('active');
+        break;
+    }
+    else if (!id){
+        nav[0].classList.add('active');
+        break;
+    }
+}
